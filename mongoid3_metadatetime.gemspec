@@ -8,8 +8,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Niels Vandekeybus"]
   s.email       = ["nvdk@arguslabs.be"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = "Provides Mongoid (3.0 and later) with enhanced meta-timestamps"
+  s.description = "Provides Mongoid with enhanced meta-timestamps that store additional parsed time metadata, allowing more powerful querying on specific time fields and across normalized time zones."
 
   s.rubyforge_project = "mongoid3_metastamp"
 
