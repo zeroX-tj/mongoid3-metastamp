@@ -4,7 +4,7 @@ require "mongoid3/metastamp/version"
 
 Gem::Specification.new do |s|
   s.name        = "mongoid3_metastamp"
-  s.version     = Mongoid3::Meta::VERSION
+  s.version     = Mongoid3::MetaStamp::VERSION
   s.authors     = ["Niels Vandekeybus"]
   s.email       = ["nvdk@arguslabs.be"]
   s.homepage    = ""

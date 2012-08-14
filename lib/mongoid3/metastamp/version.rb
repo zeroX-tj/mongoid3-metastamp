@@ -1,5 +1,5 @@
 module Mongoid3
-  module Meta
+  module MetaStamp
     VERSION = "0.0.2"
   end
 end
