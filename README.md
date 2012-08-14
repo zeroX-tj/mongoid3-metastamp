@@ -11,7 +11,7 @@ Installation
 In your Gemfile
 
 ```
-gem 'mongoid-metastamp', :git => "git://github.com/nvdk/mongoid3-metastamp.git"
+gem 'mongoid3_metastamp', :git => "git://github.com/nvdk/mongoid3-metastamp.git"
 ```
 
 ```
