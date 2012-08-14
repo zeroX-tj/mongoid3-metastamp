@@ -1,17 +1,17 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "mongoid3_metadatetime/version"
+require "mongoid3/metastamp/version"
 
 Gem::Specification.new do |s|
-  s.name        = "mongoid3_metadatetime"
-  s.version     = Mongoid3Metadatetime::VERSION
+  s.name        = "mongoid3_metastamp"
+  s.version     = Mongoid3::Meta::VERSION
   s.authors     = ["Niels Vandekeybus"]
   s.email       = ["nvdk@arguslabs.be"]
   s.homepage    = ""
   s.summary     = %q{TODO: Write a gem summary}
   s.description = %q{TODO: Write a gem description}
 
-  s.rubyforge_project = "mongoid3_metadatetime"
+  s.rubyforge_project = "mongoid3_metastamp"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")

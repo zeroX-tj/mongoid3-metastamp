@@ -1,6 +1,6 @@
 # (c) 2012 Wep'IT bvba
-module Mongoid3
-  class MetaDateTime < DateTime
+module Mongoid3::MetaStamp
+  class DateTime < DateTime
     def mongoize
         { 
           time:         self,
@@ -11,7 +11,7 @@ module Mongoid3
           hour:         self.hour,
           min:          self.min,
           sec:          self.sec,
-          zone:         ::Time.zone.name,
+          zone:         self.zone,
           offset:       self.utc_offset
         }.stringify_keys
     end
@@ -19,19 +19,19 @@ module Mongoid3
     class << self
       def mongoize(object)
         case object
-        when MetaDateTime then object.mongoize
-        when DateTime then MetaDateTime.parse(object.to_s).mongoize
+        when Mongoid3::MetaStamp::DateTime then object.mongoize
+        when DateTime then Mongoid3::MetaStamp::DateTime.parse(object.to_s).mongoize
         else object
         end
       end
       
       def demongoize(object)
-        MetaDateTime.parse(object.to_s)
+        Mongoid3::MetaStamp::DateTime.parse(object.to_s)
       end
       
       def evolve(object)
         case object
-        when MetaDateTime then object.mongoize
+        when Mongoid3::MetaStamp::DateTime then object.mongoize
         else object
         end
       end
