@@ -1,5 +1,5 @@
 require "mongoid3/metastamp/version"
-require "mongoid3/metastamp/date_time"
+require "mongoid3/metastamp/time"
 
 module Mongoid3
   module MetaStamp
