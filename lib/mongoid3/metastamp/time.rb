@@ -16,6 +16,9 @@ module Mongoid3::MetaStamp
       }.stringify_keys
     end
     
+    def [](param)
+      self.mongoize[param]
+    end
     
     def self.mongoize(object)
       return nil if object.blank?
@@ -34,8 +37,10 @@ module Mongoid3::MetaStamp
     end
       
     def self.evolve(object)
+      return nil if object.blank?
       case object
-      when Mongoid3::MetaStamp::Time then object.mongoize
+      when Mongoid3::MetaStamp::Time then object
+      when ::Time then object
       else object
       end
     end
