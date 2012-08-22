@@ -26,6 +26,8 @@ module Mongoid3::MetaStamp
         object.mongoize
       elsif object.is_a?(::Time) || object.is_a?(::DateTime)
         Mongoid3::MetaStamp::Time.parse(object.to_s).mongoize
+      elsif object.is_a?(::String)
+        Mongoid3::MetaStamp::Time.parse(object.to_s).mongoize
       else 
         object
       end
